@@ -1,0 +1,251 @@
+#works{
+    margin: 0 auto;
+     min-height: calc(100vh - 4rem); 
+      /* fullscreen-navbar  */
+    width: 100%; 
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+
+}
+.worksTitle{
+    margin: 1rem 0;
+    font-size: 3rem;
+    
+}
+.worksDesc{
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 45rem;
+}
+
+@media screen and (max-width:585px) {
+    .worksimg{
+        height: 45vw;
+
+    }
+    
+}
+
+
+.worksContainer {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    max-width: 65rem;
+    
+  }
+  
+  .worksCard {
+    
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  max-width: 200px; /* Optional max width */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .worksImg {
+    /* height: 20rem; */
+    /* margin: 0.5rem; */
+    width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+  }
+  
+  .worksCard:hover .worksImg {
+    transform: scale(1.1);
+  }
+  
+  .worksOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .worksCard:hover .worksOverlay {
+    opacity: 1;
+  }
+  
+  .worksName {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .worksTech {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .worksTechItem {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.9rem;
+  }
+  
+  .worksBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #feb47b;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .worksBtn:hover {
+    background-color: #ff7e5f;
+  }
+  
+  /* .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popupContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .popupImg {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .popupClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  } */
+
+  /* Popup Overlay */
+/* Popup Overlay */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popupContent {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 350px;
+  width: 85%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.popupClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Popup Image */
+.popupImg {
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+  margin: 0 auto 10px;
+}
+
+/* Popup Title */
+.popupTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 8px 0;
+}
+
+/* Popup Description */
+.popupDesc {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Popup Buttons Container */
+.popupButtons {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Popup Button */
+.popupButton {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.popupButton:hover {
+  background-color: #0056b3;
+}
